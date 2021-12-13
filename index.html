@@ -5,16 +5,17 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+		<link rel="stylesheet" href="./css/style.css">
 		<title>Document</title>
 	</head>
 	<body>
-		<div class="warp">
+		<div class="wrap">
 			<!-- 헤더 -->
 			<header class="header">
-				<div class="logo">캘린더</div>
+				<div class="logo">Calender</div>
 				<div class="changeBtnList">
 					<div>
-						<input type="radio" name="changeBtnList" id="dayBtn" />
+						<input type="radio" name="changeBtnList" id="dayBtn" checked/>
 						<label for="dayBtn">일</label>
 					</div>
 					<div>
@@ -22,7 +23,7 @@
 						<label for="weekBtn">주</label>
 					</div>
 					<div>
-						<input type="radio" name="changeBtnList" id="monthBtn" />
+						<input type="radio" name="changeBtnList" id="monthBtn" checked />
 						<label for="monthBtn">월</label>
 					</div>
 					<div>
@@ -32,9 +33,78 @@
 				</div>
 				<div class="searchBox">
 					<i class="fas fa-search"></i>
-					검색
+					<input type="text" placeholder="검색">
 				</div>
 			</header>
+			<main class="main">
+				<div class="mainTopContent">
+					<h2>2021년 12월</h2>
+					<div class="btnList">
+						<button class="prevBtn"> < </button>
+						<button class="todayBtn"> 오늘 </button>
+						<button class="nextBtn"> > </button>
+					</div>
+				</div>
+				<div class="tableBox">
+					<table>
+						<tr>
+							<th>일</th>
+							<th>월</th>
+							<th>화</th>
+							<th>수</th>
+							<th>목</th>
+							<th>금</th>
+							<th>토</th>
+						</tr>
+						<tr>
+							<td>
+								<div>1</div>
+								<ul>
+									<li>
+										뭐하기
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div>2</div>
+								<ul>
+									<li></li>
+								</ul>
+							</td>
+							<td>
+								<div>3</div>
+								<ul>
+									<li></li>
+								</ul>
+							</td>
+							<td>
+								<div>4</div>
+								<ul>
+									<li></li>
+								</ul>
+							</td>
+							<td>
+								<div>5</div>
+								<ul>
+									<li></li>
+								</ul>
+							</td>
+							<td>
+								<div>6</div>
+								<ul>
+									<li></li>
+								</ul>
+							</td>
+							<td>
+								<div>7</div>
+								<ul>
+									<li></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</main>
 		</div>
 	</body>
 </html>

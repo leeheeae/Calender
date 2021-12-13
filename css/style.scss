@@ -1,0 +1,182 @@
+$white-color: #FFF;
+$black-color: #111;
+$gray-color: #eee;
+$main-color: #E4B5B5;
+$sub-color01: #C0C0C0;
+$border-default: 1px solid #CCC;
+$padding: 5px 10px;
+$radius: 3px;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+input[type=checkbox], input[type=radio] {display: none;}
+ul, ol { list-style: none; }
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.wrap {
+    width: 100%;
+    min-height: 100vh;
+
+    .header {
+        width: 100%;
+        padding: 20px;
+        border-bottom: $border-default;
+        background-color: $gray-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            background-color: $main-color;
+            color: #FFF;
+            border-radius: $radius;
+            padding: $padding;
+        }
+        .changeBtnList {
+            display: flex;
+            border: $border-default;
+            border-radius: $radius;
+            overflow: hidden;
+
+            > div {
+                &:last-child {
+                    label {
+                        border-right: none;
+                    }
+                }
+            }
+
+            input {
+                display: none;
+                &:checked + label {
+                    background-color: $black-color;
+                    color: $white-color;
+                }
+            }
+            label {
+                width: 60px;
+                display: block;
+                text-align: center;
+                padding: $padding;
+                background-color: $white-color;
+                font-size: 14px;
+                cursor: pointer;
+
+                & {
+                    border-right: $border-default;
+                }
+                
+            }
+        }
+        
+        .searchBox {
+            position: relative;
+            width: 180px;
+
+            .fa-search {
+                position: absolute;
+                top: 4px;
+                left: 4px;
+            }
+
+            input {
+                display: block;
+                font-size: 14px;
+                text-align: center;
+                width: 100%;
+                border: none;
+                padding: $padding;
+                background-color: $white-color;
+                border-radius: $radius;
+            }
+        }
+    }
+
+    .main {
+        width: 100%;
+        padding: $padding;
+
+        .mainTopContent {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .btnList {
+                display: flex;
+                align-items: center;
+                
+                button {
+                    background-color: #FFF;
+                    border: $border-default;
+                    border-radius: $radius;
+                    font-size: 15px;
+                    font-weight: 600;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $gray-color;
+                    }
+                }
+                .prevBtn, .nextBtn {
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .todayBtn {
+                    width: 50px;
+                    height: 30px;
+                    margin: 0 2px;
+                }
+            }
+        }
+
+        .tableBox {
+            width: 100%;
+
+            table {
+                width: 100%;
+                table-layout: fixed;
+                border-collapse: collapse;
+            }
+            td, th {
+                border: $border-default;
+                padding: 4px 14px;
+                text-align: right;
+
+                &:first-child {
+                    color: #F50608;
+                }
+                
+                &:last-child {
+                    color: #3976BE;
+                }
+            }
+            th {
+                background-color: $gray-color;
+            }
+            td {
+                li {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+.logo { color: $main-color; }
