@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 		<link rel="stylesheet" href="./css/style.css">
-		<script src="/js/calender.js"></script>
+		<script src="./js/calender.js"></script>
 		<title>Document</title>
 	</head>
 	<body>
@@ -41,75 +41,34 @@
 				<div class="mainTopContent">
 					<h2>2021년 12월</h2>
 					<div class="btnList">
-						<button class="prevBtn"> < </button>
-						<button class="todayBtn"> 오늘 </button>
-						<button class="nextBtn"> > </button>
+						<button class="prevBtn" onclick="prevMonth()"> < </button>
+						<button class="todayBtn" onclick="goToday()"> 오늘 </button>
+						<button class="nextBtn" onclick="nextMonth()"> > </button>
 					</div>
 				</div>
-				<div class="tableBox">
-					<table>
-						<tr>
-							<th>일</th>
-							<th>월</th>
-							<th>화</th>
-							<th>수</th>
-							<th>목</th>
-							<th>금</th>
-							<th>토</th>
-						</tr>
-						<tr>
-							<td>
-								<div>1</div>
-								<ul>
-									<!-- <li style="background-color: #DCE4F4;">
-										일정 등록 시도하기
-									</li>
-									<li style="background-color: #FCDC0C">
-										일정 등록 시도하기22
-									</li>
-									<li style="background-color: #FCF4EC">
-										일정 등록 시도하기22
-									</li> -->
-								</ul>
-							</td>
-							<td>
-								<div>2</div>
-								<ul>
-									<li></li>
-								</ul>
-							</td>
-							<td class="today">
-								<div>3</div>
-								<ul>
-									<li></li>
-								</ul>
-							</td>
-							<td>
-								<div>4</div>
-								<ul>
-									<li></li>
-								</ul>
-							</td>
-							<td>
-								<div>5</div>
-								<ul>
-									<li></li>
-								</ul>
-							</td>
-							<td>
-								<div>6</div>
-								<ul>
-									<li></li>
-								</ul>
-							</td>
-							<td>
-								<div>7</div>
-								<ul>
-									<li></li>
-								</ul>
-							</td>
-						</tr>
-					</table>
+				<div class="calender">
+					<div class="calender-week-day">
+						<div>일</div>
+						<div>월</div>
+						<div>화</div>
+						<div>수</div>
+						<div>목</div>
+						<div>금</div>
+						<div>토</div>
+					</div>
+					<div class="calendar-days">
+						<!-- <div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+						<div>5</div>
+						<div>6</div>
+						<div>7</div>
+						<div>8</div>
+						<div>9</div>
+						<div>10</div>
+						<div>11</div> -->
+					</div>
 				</div>
 			</main>
 		</div>

@@ -156,60 +156,39 @@ body {
             }
         }
 
-        .tableBox {
-            width: 100%;
-
-            table {
-                width: 100%;
-                table-layout: fixed;
-                border-collapse: collapse;
-            }
-            td, th {
-                border: $border-default;
-                text-align: right;
-
-                &:first-child {
-                    color: $red-color;
-                }
-                
-                &:last-child {
-                    color: $blue-color;
-                }
-            }
-            th {
-                background-color: $gray-color;
-                padding: $padding;
-            }
-            td {
-
-                padding: 6px 5px;
+        .calender {
+            border: 1px solid #CCC; 
+            
+            .calender-week-day {
+                display: flex;
 
                 > div {
-                    font-size: 1rem;
-                    font-weight: 600;
-                    margin-bottom: 10px;
-                    width: 24px;
-                    height: 24px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-left: auto;
-                }
-                ul {
-                    overflow-y: auto;
-                    min-height: 90px;
-                    li {
-                        font-weight: bold;
-                        color: $black-color;
-                        font-size: 0.95rem;
-                        padding: 2px 4px;
-                        margin-bottom: 6px;
+                    text-align: right;
+                    padding: 10px 14px;
+                    border-bottom: 1px solid #CCC;
+                    border-right: 1px solid #CCC;
+                    background-color: #eee;
+                    width: calc(100% / 7);
+
+                    &:nth-child(7) {
+                        border-right: 0;
                     }
                 }
-                &.today {
-                    > div {
-                        background-color: $main-color;
-                        border-radius: 50%;
+            }
+            .calendar-days {
+                display: flex;
+                flex-wrap: wrap;
+
+                > div {
+                    text-align: right;
+                    padding: 14px;
+                    width: calc(100% / 7);
+                    min-height: 100px;
+                    border-bottom: 1px solid #CCC;
+                    border-right: 1px solid #CCC;
+
+                    &:nth-child(7n) {
+                        border-right: 0;
                     }
                 }
             }
