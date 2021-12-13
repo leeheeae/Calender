@@ -4,9 +4,37 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 		<title>Document</title>
 	</head>
 	<body>
-		<div>test</div>
+		<div class="warp">
+			<!-- 헤더 -->
+			<header class="header">
+				<div class="logo">캘린더</div>
+				<div class="changeBtnList">
+					<div>
+						<input type="radio" name="changeBtnList" id="dayBtn" />
+						<label for="dayBtn">일</label>
+					</div>
+					<div>
+						<input type="radio" name="changeBtnList" id="weekBtn" />
+						<label for="weekBtn">주</label>
+					</div>
+					<div>
+						<input type="radio" name="changeBtnList" id="monthBtn" />
+						<label for="monthBtn">월</label>
+					</div>
+					<div>
+						<input type="radio" name="changeBtnList" id="yearBtn" />
+						<label for="yearBtn">연도</label>
+					</div>
+				</div>
+				<div class="searchBox">
+					<i class="fas fa-search"></i>
+					검색
+				</div>
+			</header>
+		</div>
 	</body>
 </html>
