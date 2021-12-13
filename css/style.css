@@ -1,7 +1,14 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Pretendard-Regular";
 }
 
 input[type=checkbox], input[type=radio] {
@@ -139,7 +146,7 @@ body {
 }
 .wrap .main .tableBox td, .wrap .main .tableBox th {
   border: 1px solid #CCC;
-  padding: 4px 14px;
+  padding: 5px 10px;
   text-align: right;
 }
 .wrap .main .tableBox td:first-child, .wrap .main .tableBox th:first-child {
@@ -151,8 +158,14 @@ body {
 .wrap .main .tableBox th {
   background-color: #eee;
 }
-.wrap .main .tableBox td li {
+.wrap .main .tableBox td ul {
+  overflow-y: auto;
+}
+.wrap .main .tableBox td ul li {
   font-weight: bold;
+  color: #111;
+  font-size: 0.95rem;
+  padding: 2px 4px;
 }
 
 .logo {

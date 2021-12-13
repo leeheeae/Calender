@@ -1,13 +1,22 @@
 $white-color: #FFF;
 $black-color: #111;
 $gray-color: #eee;
+$red-color: #F50608;
+$blue-color: #3976BE;
 $main-color: #E4B5B5;
 $sub-color01: #C0C0C0;
 $border-default: 1px solid #CCC;
 $padding: 5px 10px;
 $radius: 3px;
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard-Regular'}
 input[type=checkbox], input[type=radio] {display: none;}
 ul, ol { list-style: none; }
 
@@ -157,23 +166,29 @@ body {
             }
             td, th {
                 border: $border-default;
-                padding: 4px 14px;
+                padding: $padding;
                 text-align: right;
 
                 &:first-child {
-                    color: #F50608;
+                    color: $red-color;
                 }
                 
                 &:last-child {
-                    color: #3976BE;
+                    color: $blue-color;
                 }
             }
             th {
                 background-color: $gray-color;
             }
             td {
-                li {
-                    font-weight: bold;
+                ul {
+                    overflow-y: auto;
+                    li {
+                        font-weight: bold;
+                        color: $black-color;
+                        font-size: 0.95rem;
+                        padding: 2px 4px;
+                    }
                 }
             }
         }
