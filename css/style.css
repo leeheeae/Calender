@@ -146,7 +146,6 @@ body {
 }
 .wrap .main .tableBox td, .wrap .main .tableBox th {
   border: 1px solid #CCC;
-  padding: 5px 10px;
   text-align: right;
 }
 .wrap .main .tableBox td:first-child, .wrap .main .tableBox th:first-child {
@@ -157,15 +156,36 @@ body {
 }
 .wrap .main .tableBox th {
   background-color: #eee;
+  padding: 5px 10px;
+}
+.wrap .main .tableBox td {
+  padding: 6px 5px;
+}
+.wrap .main .tableBox td > div {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
 }
 .wrap .main .tableBox td ul {
   overflow-y: auto;
+  min-height: 90px;
 }
 .wrap .main .tableBox td ul li {
   font-weight: bold;
   color: #111;
   font-size: 0.95rem;
   padding: 2px 4px;
+  margin-bottom: 6px;
+}
+.wrap .main .tableBox td.today > div {
+  background-color: #E4B5B5;
+  border-radius: 50%;
 }
 
 .logo {
