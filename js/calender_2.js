@@ -1,4 +1,4 @@
-const date = new Date();
+let date = new Date();
 
 const readCalender = () => {
 	const todayYear = date.getFullYear();
