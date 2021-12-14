@@ -58,8 +58,10 @@ const renderCalendar = () => {
     const today = new Date();
     if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) {
         for(let date of document.querySelectorAll('.this')) {
-            date.classList.add('today');
-            break;
+            if (+date.innerText === today.getDate()) {
+                date.classList.add('today');
+                return;
+            }
         }
     }
 };
