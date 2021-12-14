@@ -165,13 +165,18 @@ body {
                 > div {
                     text-align: right;
                     padding: 10px 14px;
-                    border-bottom: 1px solid #CCC;
-                    border-right: 1px solid #CCC;
+                    border-bottom: $border-default;
+                    border-right: $border-default;
                     background-color: #eee;
                     width: calc(100% / 7);
 
-                    &:nth-child(7) {
+                    &:nth-child(7n) {
                         border-right: 0;
+                        color: $blue-color;
+                    }
+                    
+                    &:nth-child(7n-6) {
+                        color: $red-color;
                     }
                 }
             }
@@ -183,12 +188,39 @@ body {
                     text-align: right;
                     padding: 14px;
                     width: calc(100% / 7);
-                    min-height: 100px;
-                    border-bottom: 1px solid #CCC;
-                    border-right: 1px solid #CCC;
+                    min-height: 120px;
+                    border-bottom: $border-default;
+                    border-right: $border-default;
 
                     &:nth-child(7n) {
                         border-right: 0;
+                        color: $blue-color;
+                    }
+                    
+                    &:nth-child(7n-6) {
+                        color: $red-color;
+                    }
+
+                    .other {
+                      opacity: 0.3;  
+                    }
+
+                    .today {
+                        position: relative;
+                        color: $white-color;
+                        
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            z-index: -1;
+                            top: -3px;
+                            left: -8px;
+                            width: 24px;
+                            height: 24px;
+                            background-color: $blue-color;
+                            border-radius: 50%;
+                        }
                     }
                 }
             }

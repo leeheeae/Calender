@@ -40,12 +40,28 @@ const renderCalendar = () => {
     const dates = prevDates.concat(thisDates, nextDates);
 
     //Dates 정리
+    const firstDateIndex = dates.indexOf(1);
+    const lastDateIndex = dates.lastIndexOf(TLDate);
+
+
     dates.forEach((date, i) => {
-        dates[i] = `<div class="date">${date}</div>`;
+        const condition = i >= firstDateIndex && i < lastDateIndex + 1 ? 'this' : 'other';
+        dates[
+			i
+		] = `<div class="date"><span class="${condition}"">${date}</span></div>`;
     });
 
     //그리기
     document.querySelector('.calendar-days').innerHTML = dates.join('');
+
+    //오늘 날짜 그리기
+    const today = new Date();
+    if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) {
+        for(let date of document.querySelectorAll('.this')) {
+            date.classList.add('today');
+            break;
+        }
+    }
 };
 
 //이전 버튼

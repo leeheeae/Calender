@@ -150,8 +150,12 @@ body {
   background-color: #eee;
   width: 14.2857142857%;
 }
-.wrap .main .calender .calender-week-day > div:nth-child(7) {
+.wrap .main .calender .calender-week-day > div:nth-child(7n) {
   border-right: 0;
+  color: #3976BE;
+}
+.wrap .main .calender .calender-week-day > div:nth-child(7n-6) {
+  color: #F50608;
 }
 .wrap .main .calender .calendar-days {
   display: flex;
@@ -161,12 +165,35 @@ body {
   text-align: right;
   padding: 14px;
   width: 14.2857142857%;
-  min-height: 100px;
+  min-height: 120px;
   border-bottom: 1px solid #CCC;
   border-right: 1px solid #CCC;
 }
 .wrap .main .calender .calendar-days > div:nth-child(7n) {
   border-right: 0;
+  color: #3976BE;
+}
+.wrap .main .calender .calendar-days > div:nth-child(7n-6) {
+  color: #F50608;
+}
+.wrap .main .calender .calendar-days > div .other {
+  opacity: 0.3;
+}
+.wrap .main .calender .calendar-days > div .today {
+  position: relative;
+  color: #FFF;
+}
+.wrap .main .calender .calendar-days > div .today::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -3px;
+  left: -8px;
+  width: 24px;
+  height: 24px;
+  background-color: #3976BE;
+  border-radius: 50%;
 }
 
 .logo {
